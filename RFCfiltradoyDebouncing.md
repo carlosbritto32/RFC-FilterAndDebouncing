@@ -1,20 +1,18 @@
-# Sistema de filtrado para los resultados y aplicacion de _debouncing_ en la busqueda
+# Results filter system and debouncing
 
-Autores:
+- Start Date: ( 2022-02-22)
+- Members: ( @carlosbritto32, @Hermestech)
+- RFC PR:
 
-- @carlosbritto32
-- @Hermestech
+# Summary
 
-## 1 TL;DR
+In our proposal we want to create a filter system for the search bar, using axios to get API data and renderizing in a list that will show all results that match with users search, then we want to show this data.list in real time so we have to use debouncing to avoid an app crash when users are typing in the search bar field.
 
-Se propone hacer un sistema de filtrado de resultados para el buscador de la app de la siguiente manera:
-instalar axios (que es un cliente HTTP basado en promesas) y utilizarlo para tomar la data de la API que vamos a consumir. Despues de tener lista la data debemos mostrar en una lista desplegable las opciones que coincidan con lo que este escribiendo el usuario en la barra de busqueda, para que encuentre el lugar que esta buscando de manera rapido. Y debemos aplicar debouncing porque esperamos ver los resultados de filtrado en tiempo real, para evitar que nuestra app se pause o deje de responder cuando el usuario este escribiendo en el input de navegacion, porque pueden existir miles o millones de lugares en la API que va a consumir nuestra app
+## Motivation
 
-## 2 Motivación
+we want to develop a fast and reliable app, that show what users are looking for in a very efficent and easily way.
 
-Queremos desarrollar un sistema que sea veloz confiable, y sobre todo que le muestre todo de manera concreta a nuestro usuario, para que encuentre los lugares que este buscando de manera eficaz.
-
-## 3 Propuesta de implementación
+## Detailed design
 
 C1
 ![](https://github.com/carlosbritto32/RFC-FilterAndDebouncing/blob/main/img/C1.drawio.png)
@@ -25,29 +23,33 @@ C2
 C3
 ![](https://github.com/carlosbritto32/RFC-FilterAndDebouncing/blob/main/img/C3.drawio.png)
 
-## 4 Métricas
+## Metrics
 
-No aplica
+Not applicable
 
-## 5 Riesgos e inconvenientes
+## Drawbacks
 
-- El principal riesgo es que si no logramos realizar una busqueda eficiente, podemos crashear nuestra app.
-- la busqueda puede ser muy lenta
-- mala experiencia del usuario
+Bad user experience, slow search and if we don't get a good searching code we can crash our app.
 
-## 6 Alternativas
+## Alternatives
 
-- podemos usar fetch en lugar de axios
+-we can use fetch instead of axios.
+-we can use ky instead of axios.
+-we can use superagent instead of axios.
 
-## 7 Impacto potencial y dependencias
+## Adoption strategy
 
-- Al mostrarse en el home impactamos la UI
-- impacta el backend, y la base de datos de lugares
+- The search bar will be in the home page, so we are going to impact the UI team.
+- The search bar are going to consume an API, so we are going to impact the data base of the places and the backend team.
 
-## 8 Preguntas sin resolver
+## How we teach this
 
-Como va a ser la consistencia de la base de datos y si la busqueda debe ser key sensitive.
+for the filter system we have to create a function that contains array methods to show the data that users are seaarching for.
+for debouncig we have to use a react hook (useEffect) with a delay to avoid our app to renderize all the change or keyup events, that delay will give time to users to type what are they searching for without renderizing all the events, just renderize the las change or key up event.
 
-## 9 Conclusión
+we have to create a good documentation to teach all C9 team our filter system and how debouncing works here.
 
-El debouncing es importante para nuestra search bar, debido a que brinda una buena experiancia de uso para nuestro usuario.
+## Unresolved questions
+
+-how will be the consistency of the data base?
+-the search has to be key sensitive?
