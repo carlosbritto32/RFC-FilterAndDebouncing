@@ -18,8 +18,10 @@ Queremos desarrollar un sistema que sea veloz confiable, y sobre todo que le mue
 
 C1
 ![](https://github.com/carlosbritto32/RFC-FilterAndDebouncing/blob/main/img/C1.drawio.png)
+
 C2
 ![](https://github.com/carlosbritto32/RFC-FilterAndDebouncing/blob/main/img/C2.PNG)
+
 C3
 ![](https://github.com/carlosbritto32/RFC-FilterAndDebouncing/blob/main/img/C3.drawio.png)
 
