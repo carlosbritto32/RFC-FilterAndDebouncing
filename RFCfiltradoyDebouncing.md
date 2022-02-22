@@ -44,7 +44,7 @@ Bad user experience, slow search and if we don't get a good searching code we ca
 
 ## How we teach this
 
-for the filter system we have to create a function that contains array methods to show the data that users are seaarching for.
+for the filter system we have to create a function that contains array methods(filter, map) to show the data that users are searching for.
 for debouncig we have to use a react hook (useEffect) with a delay to avoid our app to renderize all the change or keyup events, that delay will give time to users to type what are they searching for without renderizing all the events, just renderize the las change or key up event.
 
 we have to create a good documentation to teach all C9 team our filter system and how debouncing works here.
