@@ -17,11 +17,11 @@ Queremos desarrollar un sistema que sea veloz confiable, y sobre todo que le mue
 ## 3 Propuesta de implementación
 
 C1
-![](./img/C1.drawio.png)
+![](https://github.com/carlosbritto32/RFC-FilterAndDebouncing/blob/main/img/C1.drawio.png)
 C2
-![](./img/C2.PNG)
+![](https://github.com/carlosbritto32/RFC-FilterAndDebouncing/blob/main/img/C2.PNG)
 C3
-![](./img/C3.drawio.png)
+![](https://github.com/carlosbritto32/RFC-FilterAndDebouncing/blob/main/img/C3.drawio.png)
 
 ## 4 Métricas
 
